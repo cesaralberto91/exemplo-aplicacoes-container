@@ -1,0 +1,7 @@
+{
+  "name": "trabalho-4bimestre",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

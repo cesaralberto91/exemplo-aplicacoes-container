@@ -1,0 +1,38 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Usuário
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-list>
+  <ion-item>
+    <ion-input label="Nome" [(ngModel)]="user.nome"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input type="number" label="Salário" [(ngModel)]="user.salario"></ion-input>
+  </ion-item>
+  <ion-button expand="block" (click)="create()">Cadastrar</ion-button> 
+</ion-list>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col><b>ID</b></ion-col>
+      <ion-col><b>Nome</b></ion-col>
+      <ion-col><b>Salário</b></ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <ion-row *ngFor="let user of users">
+      <ion-col>{{ user.id }}</ion-col>
+      <ion-col>{{ user.nome }}</ion-col>
+      <ion-col>{{ user.salario }}</ion-col>
+      <ion-col>
+        <ion-icon name="trash-bin-outline" (click)="delete(user.id)"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

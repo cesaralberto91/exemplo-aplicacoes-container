@@ -1,0 +1,7 @@
+*.env
+
+data/
+.angular/
+wwww/
+.vscode/
+node_modules/
